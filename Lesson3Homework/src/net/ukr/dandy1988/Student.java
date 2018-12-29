@@ -1,6 +1,6 @@
 package net.ukr.dandy1988;
 
-public class Student extends Human{
+public class Student extends Human implements Comparable {
 
 	private String group;
 
@@ -28,6 +28,21 @@ public class Student extends Human{
 		return (super.toString() + ", group=" + group + "]");
 	}
 
-	
-	
+	@Override
+	public int compareTo(Object o) {
+		Student st = (Student) o;
+
+		if (o == null) {
+			return 1;
+		}
+
+		if (this.getName().compareTo(st.getName()) > 0) {
+			return 1;
+		}
+		if (this.getName().compareTo(st.getName()) < 0) {
+			return -1;
+		}
+		return 0;
+	}
+
 }

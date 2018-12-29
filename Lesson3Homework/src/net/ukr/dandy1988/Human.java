@@ -63,5 +63,6 @@ public class Human {
 		return "[name=" + name + ", surname=" + surname + ", dateOfBirth=" + dateOfBirth + ", sex=" + sex ;
 	}
 	
+
 	
 }
